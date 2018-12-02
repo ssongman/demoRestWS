@@ -1,6 +1,10 @@
 
 < Rest API Server >
-
+@RequestMapping("/persons")
+	@GetMapping("/all")  -- getAll
+	@GetMapping("{id}")  -- getPerson
+	@PostMapping("/post")  -- createNewPerson
+	
 
 
 < Client >

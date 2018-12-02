@@ -1,5 +1,5 @@
 
-< Rest API Server >
+< Rest API Server : demoRestWS >
 @RequestMapping("/persons")
 	@GetMapping("/all")  -- getAll
 	@GetMapping("{id}")  -- getPerson
@@ -7,7 +7,7 @@
 	
 
 
-< Client >
+< Rest API Client : demoRestConsume >
 http://localhost:8080/persons/1
 
 * curl 실행

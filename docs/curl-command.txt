@@ -1,0 +1,29 @@
+
+# Read person
+curl -i -X GET http://localhost:8080/persons/1
+curl -i -H "Content-Type: application/json" -X GET http://localhost:8080/persons/all
+curl -i -H "Content-Type: application/json" -X GET http://localhost:8080/persons/1
+curl -i -H "Content-Type: application/json" -X GET http://localhost:8080/persons/2
+
+# Add new person
+curl -i -H "Content-Type: application/json" -X POST -d '{ 
+		"firstName":"yj",
+		"lastName":"song",
+		"age":40           
+	}' http://localhost:8080/persons
+
+curl -i -X POST -d {"firstName":"yj", "lastName":"song", "age":40} http://localhost:8080/persons/post
+curl -i -H "Content-Type: application/json" -X POST -d '{"firstName":"yj", "lastName":"song", "age":40}' http://localhost:8080/persons/post
+curl -i -H "Content-Type: application/json" -X POST -d {"firstName":"yj", "lastName":"song", "age":40} http://localhost:8080/persons/post
+curl -i -H "Content-Type: application/json;charset=UTF-8" -X POST -d {"firstName":"yj", "lastName":"song", "age":40} http://localhost:8080/persons/post
+
+
+
+# Post
+curl -i -H "Content-Type: application/json" -X POST -d '{
+        "firstName": "Honest",
+        "lastName": "song",
+		"age":40
+    }' localhost:8080/persons/post
+curl -i -H "Content-Type: application/json" -X POST -d '{"firstName": "Honest",  "lastName": "song", "age":40}' localhost:8080/persons/post
+
